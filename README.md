@@ -24,7 +24,7 @@ This program was created with the folowing:
 
 ## Getting Started 
 
-To run this program your going to need to download or clone this github repository, and then download and use [Jython](https://www.jython.org/download). Next open the file in Jython then load the program and the file should run.
+To run this program your going to need to download or clone this github repository, and then download [Jython](https://www.jython.org/download) and open the application . Next open the file in Jython then load the program and the file should run.
 
 
 
