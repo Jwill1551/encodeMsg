@@ -2,11 +2,13 @@
 #A Program that encodes a secret message
 #12/8/19
 
+#The Array of characters that we need to check for the password
 alphaArray = (['a','b','c','d','e','f','g','h','i','j','k','l','m',
                'n','o','p','q','r','s','t','u','v','w','x','y','z',
                'A','B','C','D','E','F','G','H','I','J','K','L','M',
                'N','O','P','Q','R','S','T','U','V','W','X','Y','Z','!'])
 
+#Changes the RGB pixels withing a selected picture
 def ClearLSBPic(aPicture):
   for px in getPixels(aPicture):
     setRed(px,getRed(px) & 252)
@@ -14,6 +16,7 @@ def ClearLSBPic(aPicture):
     setBlue(px,getBlue(px) & 252)
   return aPicture
   
+#The message or text is encoded on the image   
 def encodeMsg():
   for counter in range(0,len(msg)):
     charIndex = alphaArray.index(msg[counter])
@@ -27,7 +30,7 @@ def encodeMsg():
     setBlue(allPixels[counter],getBlue(allPixels[counter]) | middleBits)
     setGreen(allPixels[counter],getGreen(allPixels[counter]) | rightBits)
     
-
+#The function below requires a password in order for the user to recieve the message
 def decodeMsg():
   decodedMsg = ""
   for counter in range(0,len(msg)):
